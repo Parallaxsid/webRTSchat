@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+    <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
+    <script>
+        const ROOM_ID = "<%=roomId %>";
+    </script>
+</head>
+<body>
+   
+
+       <div class="main">
+<div class="main__left">
+    <div class="main__videos">
+        <div id = "video-grid">
+
+
+        </div>
+    </div>
+    <div class="main__controls">
+        <div class="main__controls__block">
+           <div onclick="muteUnmute()" class="main__controls__button main__mute_button">
+              <i class="fas fa-microphone"></i>
+              <span>Mute</span>
+           </div>
+           <div onclick="playStop()" class="main__controls__button main__video_button" >
+              <i class="fas fa-video"></i>
+              <span>Stop Video</span>
+           </div>
+        </div>
+        <div class="main__controls__block">
+           
+           <div  onclick="leave" class="main__controls__button leave_meeting">
+            <i class="fas fa-phone-slash"></i>
+              <span onClick="window.location.reload();"></button>Leave Meeting</span>
+              
+           </div>
+        </div>
+     </div>
+  </div>
+  <div class="main__right">
+  <div id = "chat-window">
+    <div id="output"></div>
+    <div id="typing"></div>
+  </div>
+  
+
+
+
+
+
+ <div class="container">
+      <input type="text" id="handle" class="form-control" placeholder="name" required autofocus>
+    
+      <input type="text" id="message" class="form-control" placeholder="enter a message" required>
+     
+      <button id="button" class="btn btn-lg btn-primary btn-block" type="submit">Send</button>
+  
+       </div>
+
+     
+      
+ 
+        
+        
+  </div> 
+       </div>
+
+    <script src="script.js"></script>
+   
+</body>
+</html>
