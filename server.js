@@ -46,4 +46,4 @@ socket.on('userMessage', (data) => {
 })
 
 
-server.listen(process.env.PORT||3030)
+server.listen(process.env.PORT||3000);
