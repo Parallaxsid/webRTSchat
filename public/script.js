@@ -7,8 +7,8 @@ myVideo.muted = true;
 var peer = new Peer (undefined, {
   path: '/peerjs',
   host: '/',
-  port: '443'
- 
+  port: '3000'
+
 })
 
 let myVideoStream
@@ -148,3 +148,11 @@ socket.on("userMessage", (data) => {
 socket.on('userTyping', (data) => {
     typing.innerHTML = '<p><em>' + data + ' is typing... </em></p>'
 })
+
+$(document).keypress(function (e) {
+  if (e.which == 13) {
+          document.getElementById("button").click();
+          document.getElementById("text");
+          
+  }
+});
