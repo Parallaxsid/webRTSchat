@@ -1,3 +1,19 @@
+
+@media screen and (max-height: 768px) {
+    video {
+        max-height: 300px;
+    }
+  }
+
+  @media screen and (max-height: 900px) {
+    video {
+        max-height: 300px;
+    }
+  }
+
+
+
+
 html{
     overflow:  hidden;
 }
@@ -37,14 +53,12 @@ html{
 
 }
 
-
 .main__controls {
     color: #D2D2D2;
     display: flex;
-    position: relative;
-    left: 538px;
-    bottom: 120px;
-    padding: 5px;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+    flex-direction: relative;
 }
 
 .main__controls__block {
@@ -80,6 +94,10 @@ html{
     flex-direction: column;
 }
 
+#output{
+    overflow-y: auto;
+}
+
 .unmute,
 .stop {
     color: #CC3B33;
@@ -87,8 +105,8 @@ html{
 
 #output {
     width: 575px;
-    height: 937px;
-    border-radius: 15px;
+    height: 100%;
+    border-radius: 15px 15px 0 0;
     background-color: rgba(0,0,0,0.4) !important;
    
    
@@ -98,6 +116,11 @@ html{
     border-radius: 15px;
     padding: 2.25rem 1.25rem;
     background-color: rgba(0,0,0,0.1) !important;
+}
+
+.contain_message{
+    padding: 2.25rem 1.25rem;
+    background-color: rgba(0,0,0,0.5) !important;
 }
 
 
@@ -118,18 +141,6 @@ video {
     border-radius: 14px;
 }
 
-.form__control {
-    width: 100px;
-}
-
-
-.container {
-    position: relative;
-    top: -90px;
-    flex: 1 1 auto;
-   
-}
-
 
 p{
     width: max-content;
@@ -142,6 +153,8 @@ p{
 
 
 #message{
+    margin-top: -34px;
+    margin-left: 5px;
     background-color: #0000004d !important;
     border: 0 !important;
     height: 58px;
@@ -151,7 +164,6 @@ p{
     line-height: 1.5;
     color: blanchedalmond;
 }
-
 
 
 #button{
@@ -205,3 +217,25 @@ p{
         background-position: 0% 0%
     }
 }
+
+
+::-webkit-scrollbar{
+    width:12px;
+}
+
+::-webkit-scrollbar-thumb{
+    border-width:1px 1px 1px 2px;
+    border-color: #777;
+    background-color: #aaa;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    border-width: 1px 1px 1px 2px;
+    border-color: #555;
+    background-color: #777;
+}
+
+::-webkit-scrollbar-track{
+    border-width:0;
+}
+
